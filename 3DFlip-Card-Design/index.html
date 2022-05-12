@@ -8,7 +8,9 @@
     <body>
         <div class="container">
             <div class="product">
-                <div class="product-inner">
+                <img src="img/shoes.png" alt="" id="frontImg">
+                <img src="img/shoes2.png" alt="" id="backImg">
+                <div class="product-inner" id="productBox" >
                     <div class="product-front">
                         <div class="product-top">
                             <h1>Nike</h1>
@@ -23,13 +25,13 @@
                                     <img src="img/shoes-icon.png" alt="">
                                 </div>
                                 <div class="select-item">
-                                    <img src="img/shoes-icon2.png" alt="">
+                                    <img src="img/shoes-icon2.png" alt="" onclick="flipRight()">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-back">
-                        <div class="product-top product-top-2">
+                        <div class="product-top product-top2">
                             <h1>Nike</h1>
                         </div>
                         <div class="product-bottom">
@@ -39,10 +41,10 @@
                             <button type="button">Add To Bag</button>
                             <div class="color-select">
                                 <div class="select-item">
-                                    <img src="img/shoes-icon.png" alt="">
+                                    <img src="img/shoes-icon.png" alt="" onclick="flipLeft()">
                                 </div>
                                 <div class="select-item">
-                                    <img src="img/shoes-icon2.png" alt="">
+                                    <img src="img/shoes-icon2.png" alt="" onclick="">
                                 </div>
                             </div>
                         </div>
@@ -56,5 +58,26 @@
                 </div>
             </div>
         </div>
+
+        <script>
+             var productBox = document.getElementById("productBox");
+             var frontImg = document.getElementById("frontImg");
+             var backImg = document.getElementById("backImg");
+
+             function flipRight(){
+                 productBox.style.transform = "rotateY(180deg)"
+                 frontImg.style.left = "650px"
+                 backImg.style.left = "20px";
+                 frontImg.style.transform = "rotate(-30deg)";
+                 backImg.style.transform = "rotate(0deg)";
+             }
+             function flipLeft(){
+                 productBox.style.transform = "rotateY(0deg)";
+                 frontImg.style.left = "20px";
+                 backImg.style.left = "-650px";
+                 frontImg.style.transform = "rotate(0deg)";
+                 backImg.style.transform = "rotate(-30deg)";
+             }
+        </script>
     </body>
 </html>
