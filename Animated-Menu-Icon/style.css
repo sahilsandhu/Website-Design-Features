@@ -38,5 +38,14 @@
     transform: translate(-50%,-50%);
 }
 .menu .line-1{
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50px);
+}
+.menu .line-3{
+    transform: translate(-50%,40px);
+}
+.open-menu .line-1{
+transform: translate(-50%,-50%) rotate(-45deg);
+}
+.open-menu .line-3{
+    transform: translate(-50%,-50%) rotate(-45deg);
 }
